@@ -56,9 +56,12 @@
 			background-color: rgb(225,142,44);	
 			color: white;
 			font-size: 18px;
+			font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 
 			border: none;
 			border-radius: 5px;
+
+			text-decoration: none;
 		}
 
 		/* format of page heading */
@@ -77,6 +80,7 @@
 		body {
 			padding: 0; 
 			margin: 0;
+			font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 		}
 	</style>
 </head>
@@ -85,12 +89,18 @@
 	<div id="title" >
 		<img id="title_logo" src="img/common/logo.png" >
 		<p id="title_slogan" >Your comfort is our priority!</p>
-		<form id="title_form" type="POST" action="" >
-			<input class="title_form_button" type="submit" name="home_page" value="HOME" >
+		<!-- horrible mistake not reported by browser -->
+		<form id="title_form" name="navigation_form" type="POST" action="" >
+			<!--<input class="title_form_button" type="submit" name="home_page" value="HOME" >-->
+			<a class="title_form_button" href="index.php">HOME</a>
+
+			<a class="title_form_button" href="check_status.php">Booking Status</a>
 			
-			<input class="title_form_button" type="submit" name="rules_page" value="RULES" href="rules.php" >
+			<!--<input class="title_form_button" type="submit" name="rules_page" value="RULES" href="rules.php" >-->
+			<a class="title_form_button" href="rules.php">RULES</a>
 			
-			<input class="title_form_button" type="submit" name="contact_page" value="CONTACT US" >
+			<!--<input class="title_form_button" type="submit" name="contact_page" value="CONTACT US" >-->
+			<a class="title_form_button" href="">CONTACT US</a>
 		</form>
 	</div>
 </body>
